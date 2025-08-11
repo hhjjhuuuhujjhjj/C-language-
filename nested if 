@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int a = 5, b = 3;
+
+    if (a != b) {           
+             if (a > b)
+                 {        // Inner if
+            printf("a is larger\n");
+        } else {
+            printf("b is larger\n");
+        }
+    } else {
+        printf("Both are equal\n");
+    }
+
+    return 0;
+}
