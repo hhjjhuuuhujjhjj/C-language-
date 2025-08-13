@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>  // Added for strlen and strcspn
+
+int main() {
+    char adjective1[50] = "";  // First adjective
+    char adjective2[50] = "";  // Second adjective
+    char adjective3[50] = "";  // Third adjective
+    char verb[50] = "";        // Verb
+    char noun[50] = "";        // Noun
+
+    // Reading inputs
+    printf("Enter an adjective (description): ");
+    fgets(adjective1, sizeof(adjective1), stdin);
+    adjective1[strlen(adjective1) - 1] = '\0';  // Replace newline with null terminator
+
+    printf("Enter a noun (animal or person): ");
+    fgets(noun, sizeof(noun), stdin);
+    noun[strlen(noun) - 1] = '\0';  // Replace newline with null terminator
+
+    printf("Enter a verb (-ing): ");
+    fgets(verb, sizeof(verb), stdin);
+    verb[strlen(verb) - 1] = '\0';  // Replace newline with null terminator
+
+    printf("Enter an adjective(descriotion): ");
+    fgets(adjective2, sizeof(adjective2), stdin);
+    adjective2[strlen(adjective2) - 1] = '\0';  // Replace newline with null terminator
+
+    printf("Enter an adjective (description): ");
+    fgets(adjective3, sizeof(adjective3), stdin);
+    adjective3[strlen(adjective3) - 1] = '\0';  // Replace newline with null terminator
+
+    // Printing the Mad Libs sentence
+    printf("\n Today i went to a %s zoo \n",adjective1);
+    printf("in an exihibition i saw %s\n",noun);
+    printf(" was %s \n",noun ,adjective2 ,verb);
+    printf("I was %s!\n", adjective3 );
+    
+
+    return 0;
+}
