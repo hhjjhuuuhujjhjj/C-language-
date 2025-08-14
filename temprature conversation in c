@@ -1,0 +1,37 @@
+#include<stdio.h>
+int main () {
+	char choice ='\0';
+	float celsius =0.0f ;
+	float fahrenheit =0.0f ;
+	
+	printf("Temprature conversation programm\n");
+	printf("c. celsius to fahrenheit \n");
+	printf("f.fahrenheit to celsius \n");
+    printf ("is the temprature in calsius (c)or  fahrenheit(f)\n");
+    scanf(" %c", &choice);
+	
+     if (choice =='c'){
+     	//c to f
+     	printf("Enter temprature in celsius");
+     	scanf("%f",&celsius);
+     	fahrenheit  = (celsius *9/5) +32 ;
+     	
+     	printf("%f celsius is equal to %f fahrenheit ", celsius ,fahrenheit);
+     }
+     	else if (choice =='f'){
+     		
+     		//f to c
+     		printf("Enter temprature in fahrenheit");
+     		
+     		scanf("%f",&fahrenheit);
+     		
+       celsius = (fahrenheit-32)*5/9 ;
+     		
+     	printf("%f fahrenheit is equal to %fcelsius\n",celsius ,fahrenheit);	
+     	}
+     		else {
+     			printf("Invalid choice please enter c or f \n");
+     		}
+     		return 0;
+     	}
+     
