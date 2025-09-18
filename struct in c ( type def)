@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+typedef struct {
+    char name[50];
+    int age;
+    float gpa;
+    bool isRegular;
+} Student;
+
+void printStudent(Student student) ;
+  
+
+int main() {
+    Student student1 = {"Bro", 18, 2.5, true};
+    Student student2 = {"Chiku", 17, 3.0, false};
+
+    Student student3;
+    strcpy(student3.name, "Mithun");
+    student3.age = 15;
+    student3.gpa = 4.0;
+    student3.isRegular = true;
+
+    printStudent(student1);
+    printStudent(student2);
+    printStudent(student3);
+
+    return 0;
+}
+void printStudent(Student student) {
+    printf("Name: %s\n", student.name);
+    printf("Age: %d\n", student.age);
+    printf("GPA: %.2f\n", student.gpa);
+    printf("Is regular: %s\n", student.isRegular ? "Yes" : "No");
+    printf("\n");
+}
+output//
+
+Name: Bro
+Age: 18
+GPA: 2.50
+Is regular: Yes
+
+Name: Chiku
+Age: 17
+GPA: 3.00
+Is regular: No
+
+Name: Mithun
+Age: 15
+GPA: 4.00
+Is regular: Yes
